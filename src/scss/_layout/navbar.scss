@@ -1,0 +1,18 @@
+@import '../_helpers/variables.scss';
+
+.navbar {
+  background-color: $color-secondary;
+  
+}
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu {
+  color: $color-primary;
+  text-decoration: none;
+}
+.menu:hover {
+  color: $color-orange;
+}
