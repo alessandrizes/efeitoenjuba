@@ -1,0 +1,25 @@
+@import '../_helpers/variables';
+
+.btn {
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 2rem;
+  &_green {
+    color: $color-secondary;
+    background-color: $color-green;
+    max-width: 250px;
+    transition: all .5s;
+    margin: 0 auto;
+    &:hover, &:focus {
+      transform: translateY(-1rem);
+      box-shadow: 0 10px 10px rgba($color-primary,.2);
+      background-color: rgba($color-green, 0.8);
+    }
+  }
+}
+.share {
+  a {
+    text-decoration: none;
+  }
+}
