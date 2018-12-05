@@ -168,8 +168,9 @@
       <!-- <label for="message"></label>
       <textarea id="message" name="message" rows="5" cols="33" placeholder="Digite sua mensagem aqui"></textarea> -->
       <label for="phone"></label>
-      <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="(11)9 0000-0000">
-      <a class="principal__btn btn btn_green" href="#">compartilhar</a>
+      <input type="tel" id="phone" name="phone" maxlength="14" required placeholder="(11)90000-0000">
+      <div class="erro"></div>
+      <a class="btn btn_green" href="#">compartilhar</a>
     </div>
   </section>
   <!-- end share section -->
