@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -11,10 +11,19 @@
 
 <body>
   <!-- start navbar -->
-  <nav class="navbar">
+  <nav class="nav">
     <div class="container">
-      <img class="tst" src="src/img/logo.png" alt="logo do efeito enjuba branco, desenho de uma menina de blackpower com uma coroa na cabeça e brincos de argola">
-      <a class="menu" href="#">compartilhar</a>
+      <div class="nav__menu">
+        <img class="tst" src="src/img/logo.png" alt="logo do efeito enjuba branco, desenho de uma menina de blackpower com uma coroa na cabeça e brincos de argola">
+        <ul class="nav__menu_itens">
+          <li>
+            <a class="nav__menu_link" href="#">compartilhar</a>
+          </li>
+          <li>
+            <a href="#"><img src="src/img/menu-nav.png" alt="Menu hamburger" class="nav__menu_mobile"></a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
   <!-- end navbar -->
@@ -30,8 +39,34 @@
         </div>
       </div>
       <h2 class="header__subtitle">7 passos para enxergar o melhor em você</h2>
-      <div class="header__fotoprints">
-        <img src="src/img/footprint.png" alt="desenho de uma pegada">
+      <div class="fotoprints">
+        <svg id="svg-sprite">
+          <symbol id="paw" viewBox="0 0 249 209.32">
+            <image xlink:href="src/img/footprint.png" x="0" y="0" height="100px" width="100px" />
+          </symbol>
+        </svg>
+        <div class="ajax-loader">
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+        </div>
       </div>
     </div>
   </header>
@@ -57,17 +92,17 @@
           cupiditate! Laboriosam cupiditate similique fuga, minus maxime corporis sint iusto vitae nisi ducimus aliquam
           suscipit inventore.</p>
       </div>
-      <div class="step__footprint">
-        <img src="src/img/footprint.png" alt="desenho de uma pegada">
+      <div class="image">
+        <img src="src/img/self-knowledge.png" alt="icon self knowledge">
       </div>
     </div>
   </section>
   <!-- end step 01 -->
   <!-- start step 02 -->
   <section class="step step_background-grey">
-    <div class="container">
-      <div class="step__footprint_left">
-        <img src="src/img/footprint.png" alt="desenho de uma pegada">
+    <div class="container left">
+      <div class="image">
+        <img src="src/img/humility.png" alt="icon humility">
       </div>
       <div class="step__text step__text_left">
         <h3>#02</h3>
@@ -89,17 +124,17 @@
           cupiditate! Laboriosam cupiditate similique fuga, minus maxime corporis sint iusto vitae nisi ducimus aliquam
           suscipit inventore.</p>
       </div>
-      <div class="step__footprint">
-        <img src="src/img/footprint.png" alt="desenho de uma pegada">
+      <div class="image">
+        <img src="src/img/objective.png" alt="icon objective">
       </div>
     </div>
   </section>
   <!-- end step 03 -->
   <!-- start step 04 -->
   <section class="step step_background-green">
-    <div class="container">
-      <div class="step__footprint_left">
-        <img src="src/img/footprint.png" alt="desenho de uma pegada">
+    <div class="container left">
+      <div class="image">
+        <img src="src/img/inspiration.png" alt="icon objective">
       </div>
       <div class="step__text step__text_left">
         <h3>#04</h3>
@@ -121,17 +156,17 @@
           cupiditate! Laboriosam cupiditate similique fuga, minus maxime corporis sint iusto vitae nisi ducimus aliquam
           suscipit inventore.</p>
       </div>
-      <div class="step__footprint">
-        <img src="src/img/footprint.png" alt="desenho de uma pegada">
+      <div class="image">
+        <img src="src/img/pardon.png" alt="icon objective">
       </div>
     </div>
   </section>
   <!-- end step 05 -->
   <!-- start step 06 -->
   <section class="step step_background-red">
-    <div class="container">
-      <div class="step__footprint_left">
-        <img src="src/img/footprint.png" alt="desenho de uma pegada">
+    <div class="container left">
+      <div class="image">
+        <img src="src/img/love.png" alt="icon love">
       </div>
       <div class="step__text step__text_left">
         <h3>#06</h3>
@@ -153,8 +188,8 @@
           cupiditate! Laboriosam cupiditate similique fuga, minus maxime corporis sint iusto vitae nisi ducimus aliquam
           suscipit inventore.</p>
       </div>
-      <div class="step__footprint">
-        <img src="src/img/footprint.png" alt="desenho de uma pegada">
+      <div class="image">
+        <img src="src/img/gratitude.png" alt="icon gratitude">
       </div>
     </div>
   </section>
@@ -163,14 +198,42 @@
   <section class="share">
     <div class="container">
       <h4>Agora, chegou o momento de praticar o que você aprendeu!</h4>
-      <p>Pense na pessoa que mais te ajudou até esse momento. Envie um WhatsApp de gratidão a ela! Preencha abaixo com o número do
+      <p>Pense na pessoa que mais te ajudou até esse momento. Envie um WhatsApp de gratidão a ela! Preencha abaixo com
+        o número do
         Whatsapp de quem você pensou, clique em compartilhar e veja a primeira mudança acontecer!</p>
-      <!-- <label for="message"></label>
-      <textarea id="message" name="message" rows="5" cols="33" placeholder="Digite sua mensagem aqui"></textarea> -->
       <label for="phone"></label>
       <input type="tel" id="phone" name="phone" maxlength="14" required placeholder="(11)90000-0000">
       <div class="erro"></div>
       <a class="btn btn_green" href="#">compartilhar</a>
+      <div class="fotoprints">
+        <svg id="svg-sprite">
+          <symbol id="paw" viewBox="0 0 249 209.32">
+            <image xlink:href="src/img/footprint.png" x="0" y="0" height="100px" width="100px" />
+          </symbol>
+        </svg>
+        <div class="ajax-loader">
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+          <div class="paw"><svg class="icon">
+              <use xlink:href="#paw" /></svg></div>
+        </div>
+      </div>
     </div>
   </section>
   <!-- end share section -->

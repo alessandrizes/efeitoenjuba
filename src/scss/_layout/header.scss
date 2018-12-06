@@ -4,9 +4,10 @@
   margin-top: 50px;
   display: flex;
   align-items: center;
-  padding: 150px 0 150px 0;
+  padding: 30px;
   &__grid {
-    max-width: 700px;
+    width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
     &_efeito {
       text-align: start;
@@ -15,17 +16,25 @@
       text-align: end;
     }
     &_title {
-      text-shadow: 0px 4px 4px rgba($color-primary, 0.25);
-      font-size: 14rem;
-      letter-spacing: 0.04em;
+      font-size: 16rem;
+      letter-spacing: 0.04rem;
     }
   }
   &__subtitle {
-    margin-top: 0.5%;
-    font-size: 2em;
+    margin-top: 50px;
     text-align: center;
-    margin-top: 5%;
-    font-size: 4em;
-    text-shadow: 0px 4px 4px rgba($color-primary, 0.25);
+    font-size: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    &__grid {
+      &_title {
+        font-size: 10rem;
+      }
+    }
+    &__subtitle {
+      font-size: 2.2rem;
+    }
   }
 }

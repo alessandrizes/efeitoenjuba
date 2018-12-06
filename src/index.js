@@ -6,19 +6,26 @@ const divError = document.querySelector(".erro");
 Button.addEventListener("click", function (event) {
   event.preventDefault();
   const phone = inputPhone.value;
-  if (phone === undefined || phone === null || phone === "" || phone === " ") {
+  if (!phone.trim()) {
     inputPhone.focus();
-  } else if (isNaN(phone)){
+    return false;
+  } else if (isNaN(phone)) {
     inputPhone.focus();
-    divError.innerHTML="Digite apenas numeros!";
-  } else if (phone.length < 15){
+    divError.innerHTML = "Digite apenas números!";
+    return false;
+  } else if (!inRange(phone.length, 10, 11)) {
     inputPhone.focus();
-    divError.innerHTML="Digite um telefone válido!"
+    divError.innerHTML = "Digite um telefone válido!";
+    return false;
   } else {
-  // const phone = phone.replace(/\D/g, "");
-  window.open(`https://api.whatsapp.com/send?phone=55${phone}`)
-  }
+    // const phone = phone.replace(/\D/g, "");
+    window.open(`https://api.whatsapp.com/send?l=pt_br&phone=55${phone}`)
+  } 
 })
+
+function inRange(x, min, max) {
+  return ((x-min)*(x-max) <= 0);
+}
 
 // function mtel(v){
 //   v=v.replace(/\D/g,"");             //Remove tudo o que não é dígito

@@ -1,19 +1,37 @@
 @import '../_helpers/variables';
 
-.navbar {
+.nav {
   background-color: $color-primary;
   padding: 10px;
-  & .container {
+  &__menu {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    &_link {
+      color: $color-secondary;
+      text-decoration: none;
+      font-size: 2rem;
+      &:hover {
+        color: $color-orange;
+      }
+    }
+    &_itens {
+      align-items: center;
+      display: flex;
+    }
+    &_mobile {
+      display: none;
+    }
   }
 }
-.menu {
-  color: $color-secondary;
-  text-decoration: none;
-  font-size: 2rem;
-  &:hover {
-    color: $color-orange;
+@media (max-width: 768px)  {
+  .nav {
+    &__menu {
+      &_link {
+        display: none;
+      }
+      &_mobile {
+        display: flex;
+      }
+    }
   }
 }

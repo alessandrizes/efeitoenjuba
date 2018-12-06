@@ -1,0 +1,124 @@
+.ajax-loader, .ajax-loader__right, .ajax-loader__left{
+	// position: absolute;
+	font-size: 80px;
+	width: 1em;
+	height: 3em;
+    .paw{
+        width: 1.5em;
+        height: 1em;
+        animation: 2050ms pawAnimation ease-in-out infinite;
+        opacity: 0;
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+        //inicio for
+        @for $i from 1 through 10{
+            @if($i % 2 == 0){
+            &:nth-child(#{$i}){
+                animation-delay: #{ (($i * -1)+10)*0.25 }s;
+                transform: rotate(0deg) scaleX(-1) translate3d($i*5%, $i*-50%, 0);
+            }
+            }
+            @else{
+                &:nth-child(#{$i}){
+                    animation-delay: #{ (($i * -1)+10)*0.25 }s;
+                    transform: rotate(0deg) translate3d($i*-4%, $i*-48%, 0);
+                }
+            }    
+            @if($i == 1){
+                &:nth-child(#{$i}){
+                    animation-delay: #{ (($i * -1)+10)*0.25 }s;
+                    transform: rotate(-8deg) translate3d($i*30%, $i*-50%, 0);
+                }
+            }
+            @if($i == 2){
+                &:nth-child(#{$i}){
+                    animation-delay: #{ (($i * -1)+10)*0.25 }s;
+                    transform: rotate(-8deg) scaleX(-1) translate3d($i*-15%, $i*-60%, 0);
+                }
+            }
+            @if($i == 3){
+                &:nth-child(#{$i}){
+                    animation-delay: #{ (($i * -1)+10)*0.25 }s;
+                    transform: rotate(0deg) translate3d($i*15%, $i*-48%, 0);
+                }
+            }
+            @if($i == 4){
+                &:nth-child(#{$i}){
+                    animation-delay: #{ (($i * -1)+10)*0.25 }s;
+                    transform: rotate(0deg) scaleX(-1) translate3d($i*-8%, $i*-50%, 0);
+                }
+            }
+            @if($i == 5){
+                &:nth-child(#{$i}){
+                    animation-delay: #{ (($i * -1)+10)*0.25 }s;
+                    transform: rotate(0deg) translate3d($i*8%, $i*-48%, 0);
+                }
+            }
+            @if($i == 6){
+                &:nth-child(#{$i}){
+                    animation-delay: #{ (($i * -1)+10)*0.25 }s;
+                    transform: rotate(0deg) scaleX(-1) translate3d($i*-5%, $i*-50%, 0);
+                }
+            }
+            @if($i == 7){
+                &:nth-child(#{$i}){
+                    animation-delay: #{ (($i * -1)+10)*0.25 }s;
+                    transform: rotate(1deg) translate3d($i*1%, $i*-48%, 0);
+                }
+            }
+            @if($i == 8){
+                &:nth-child(#{$i}){
+                    animation-delay: #{ (($i * -1)+10)*0.25 }s;
+                    transform: rotate(1deg) scaleX(-1) translate3d($i*1%, $i*-50%, 0);
+                }
+            }
+        }//for loop ends
+
+    }
+}
+.ajax-loader{
+	left: 40%;
+    transform: rotate(445deg) scale(1.4) translate(-12%, -30%);
+    position: relative;
+}
+#svg-sprite{
+    display: none;
+}
+@keyframes pawAnimation {
+	0%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+@keyframes path1{
+  0%{
+    transform: rotate(0deg) scaleX(-1) translate3d(0%, -50%, 0);
+  }
+  30%{
+    transform: rotate(20deg) scaleX(-1) translate3d(-35%, -60%, 0);
+  }
+  100%{
+    transform: rotate(20deg) scaleX(-1) translate3d(-0%, -80%, 0);
+  }
+}
+@media (max-width: 768px) {
+    .ajax-loader {
+        left: 40%;
+        transform: rotate(445deg) scale(0.7) translate(-12%, -30%);
+        position: relative;
+    }
+}
+@media (max-width: 420px) {
+    .ajax-loader {
+        left: 40%;
+        transform: rotate(445deg) scale(0.6) translate(-12%, -30%);
+        position: relative;
+    }
+}
