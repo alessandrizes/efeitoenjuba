@@ -1,0 +1,27 @@
+/* footer */
+.footer{
+    margin-top: 50px;
+    background-color: $color-primary;
+    padding: 50px;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__text {
+        text-align: center;
+        margin-top: 20px;
+        color: $color-secondary;
+        font-size: 1.5rem;
+    }
+}
+.fa-github {
+    color: $color-secondary;
+    font-size: 40px;
+    margin: 5px;
+}
+.fa-linkedin {
+    color: $color-secondary;
+    font-size: 40px;
+    margin: 5px;
+}
